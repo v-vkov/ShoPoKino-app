@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <link rel="stylesheet" href="styles.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>SHOpoKINO?</title>
+    </head>
+
+    <body>
+
+      <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <div class="container">
+            <a href="./" class="brand-logo"><i class="large material-icons">weekend</i></a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="./">Home</a></li>
+              <li><a href="./">Kino</a></li>
+              <li><a href="./">About us</a></li>
+              <li><a class="modal-trigger" href="#supportModal">Support</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      </div>
+
+      <div class="container">
+        <h5>Top Rated:</h5>
+        <div class="row">
+
+          <div class="col s3 center-align">
+            <div class="card hoverable small">
+              <div id="topImg1" class="card-image">
+                <span class="card-title">Tittle</span>
+              </div>
+              <div id="topOverview1" class="card-content"></div>
+              <div class="card-action">
+                <a id="topShowMore1" class="modal-trigger" href="#topOverviewModal">Show more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s3 center-align">
+            <div class="card hoverable small">
+              <div id="topImg2" class="card-image">
+                <span class="card-title"></span>
+              </div>
+              <div id="topOverview2" class="card-content"></div>
+              <div class="card-action">
+                <a id="topShowMore2" class="modal-trigger" href="#topOverviewModal">Show more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s3 center-align">
+            <div class="card hoverable small">
+              <div id="topImg3" class="card-image">
+                <span class="card-title"></span>
+              </div>
+              <div id="topOverview3" class="card-content"></div>
+              <div class="card-action">
+                <a id="topShowMore3" class="modal-trigger" href="#topOverviewModal">Show more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s3 center-align">
+            <div class="card hoverable small">
+              <div id="topImg4" class="card-image">
+                <span class="card-title"></span>
+              </div>
+              <div id="topOverview4" class="card-content"></div>
+              <div class="card-action">
+                <a id="topShowMore4" class="modal-trigger" href="#topOverviewModal">Show more</a>
+              </div>
+          </div>
+        </div>
+
+      </div>
+        </div>
+      </div>
+
+      <div class="container center-align">
+        <button id="mainBtn" class="btn-large waves-effect waves-red">get random movie</button>
+      </div>
+
+      <div class="container center-align">
+        <div class="row">
+          <div class="col s4"></div>
+          <div class="col s4">
+            <div id="randomMovieCard" class="card hoverable">
+              
+              <div class="card-content white-text">
+                <span id="randomMovie" class="card-title">Let's find something for you!</span>
+              </div>
+              <div id="randomMovieImg" class="card-image"></div>
+              <div class="card-action">
+                <a id="randomShowMore" class="modal-trigger" href="#randomOverviewModal">Show more</a>
+              </div>
+            </div>
+          </div>
+          <div class="col s4"></div>
+       </div>
+      </div>
+
+
+      <div id="supportModal" class="modal">
+        <div class="modal-content">
+          <h4>Support</h4>
+          <p>Here you can find some good movies. Try Random Button to see random movie and rating of it. To read more about this movie - click "Show more". Good luck! </p>
+        </div>
+      </div>
+
+      <div id="topOverviewModal" class="modal">
+        <div class="modal-content">
+          <h4 id="topOverviewTittle">More about...</h4>
+          <p id="topOverviewMore">Oooops, we haven't any overview for this movie :(</p>
+        </div>
+      </div>
+
+      <div id="randomOverviewModal" class="modal">
+        <div class="modal-content">
+          <h4 id="randOverviewTittle">More about...</h4>
+          <p id="randOverview">Please, first try to find random movie to see the overview :)</p>
+        </div>
+      </div>
+      
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script type="module" src="./scripts/main.js"></script>
+      <script>
+          document.addEventListener('DOMContentLoaded', () => {
+          let elems = document.querySelectorAll('.modal');
+          let instances = M.Modal.init(elems, {});
+        });
+      </script>
+
+    </body>
+  </html>
+
+
